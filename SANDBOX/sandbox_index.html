@@ -9,11 +9,11 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
+		<link rel="stylesheet" href="./sandbox_style.css" />
+		<!-- <link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" /> -->
 		<link rel="icon" href="../" />
 
-		<script src="./WEBSITE/JAVASCRIPT/index.js" defer></script>
+		<!-- <script src="./WEBSITE/JAVASCRIPT/index.js" defer></script> -->
 	</head>
 	<body>
 		<!------------ HEADER ------------>
@@ -27,7 +27,7 @@
 			<!-- NAVEGATION MENU -->
 			<nav class="nav">
 				<!-- HAMBURGER TUGGLE -->
-				<div class="menu-btn" id="menu-btn">
+				<div class="menu-button" id="menu-button">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -53,5 +53,26 @@
 		<footer>
 			<h6>Copyright © 2025. Velbekommen. All rights reserved.</h6>
 		</footer>
+
+		<script>
+			//  -------- MOBILE BURGER MENU ------------
+			const menuBtn = document.getElementById("menu-btn");
+			const navMobile = document.getElementById("nav-mobile");
+
+			// Toggle mobile menu on hamburger click
+			menuBtn.addEventListener("click", () => {
+				menuBtn.classList.toggle("open");
+				navMobile.classList.toggle("open");
+			});
+
+			// Close the mobile menu when the screen gets larger than 768px
+			window.addEventListener("resize", () => {
+				if (window.innerWidth > 768) {
+					// Remove open classes when resizing to a larger screen
+					menuBtn.classList.remove("open");
+					navMobile.classList.remove("open");
+				}
+			});
+		</script>
 	</body>
 </html>
