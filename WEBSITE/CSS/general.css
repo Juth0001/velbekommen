@@ -9,6 +9,7 @@
 
 	--open: "Open Sans", sans-serif;
 	--oswald: "Oswald", sans-serif;
+	--impact: "Impact", sans-serif;
 }
 * {
 	margin: 0;
@@ -24,19 +25,19 @@ html {
 
 body {
 	/* margin-top: 7rem; */
-	background-color: var(--primary);
+	/* background-color: var(--primary); */
 	width: 100vw;
 	height: 100vh;
-	padding: 0 10%;
+	padding: 0;
 	align-items: center;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	/* margin-bottom: 20px; */
 	/* justify-content: center; */
 
 	display: grid;
 	/* grid-template-columns: repeat(3, 1fr);  --------- This code has the same efect as the line under in row 24*/
 	grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
-	grid-template-rows: 90px auto 100px;
+	grid-template-rows: 70px auto 70px;
 
 	grid-template-areas:
 		"header header header"
@@ -45,7 +46,6 @@ body {
 }
 header {
 	grid-area: header;
-	background-color: var(--primary);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -53,17 +53,16 @@ header {
 	width: 100vw;
 	height: 70px;
 	padding: 0 10%;
-	/* background-color: #70acff; */
+	background-color: var(--primary);
 	color: var(--secondary);
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* border-bottom: 2px solid var(--secondary); */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	border-bottom: 2px solid var(--secondary);
+	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 nav {
 	grid-area: nav;
@@ -77,14 +76,21 @@ nav {
 main {
 	grid-area: main;
 	justify-content: space-around;
+	padding: 0 10%;
 	background-color: var(--primary);
-	/* background-color: #ada200; */
 	/* align-items: center; */
 	/* padding-bottom: 100px; */
+	/* height: 100vh; */
 }
 footer {
 	grid-area: footer;
 	background-color: var(--secondary);
+	justify-items: right;
+	align-content: center;
+	/* text-align: right; */
+	width: 100vw;
+	height: 70px;
+	padding: 0 10%;
 }
 
 h1,
@@ -109,7 +115,7 @@ h6 {
 	transition: color 0.3s;
 }
 .logo a:hover {
-	color: var(--alert);
+	color: var(--accent);
 	/* filter: drop-shadow(0 0 2px); */
 }
 
@@ -126,18 +132,18 @@ h6 {
 	transition: color 0.4s;
 }
 .nav-links a:hover {
-	color: var(--alert);
+	color: var(--accent);
 	/* backdrop-filter: #000;
 	filter: drop-shadow(0 0 2px); */
 }
 
 /* ----- Mobile menu button ----- */
-.menu-btn {
+.menu-button {
 	display: none;
 	cursor: pointer;
 	z-index: 1001; /* Ensure it's above the mobile menu */
 }
-.menu-btn span {
+.menu-button span {
 	display: block;
 	width: 25px;
 	height: 3px;
@@ -147,17 +153,17 @@ h6 {
 }
 
 /* ----- Rotate animation for hamburger ----- */
-.menu-btn.open span:nth-child(1) {
+.menu-button.open span:nth-child(1) {
 	transform: rotate(45deg) translate(5.7px, 5.7px);
-	background-color: var(--alert);
+	background-color: var(--accent);
 }
-.menu-btn.open span:nth-child(2) {
+.menu-button.open span:nth-child(2) {
 	opacity: 0;
-	background-color: var(--alert);
+	background-color: var(--accent);
 }
-.menu-btn.open span:nth-child(3) {
+.menu-button.open span:nth-child(3) {
 	transform: rotate(-45deg) translate(5.7px, -5.7px);
-	background-color: var(--alert);
+	background-color: var(--accent);
 }
 
 /* ----- Full-screen mobile menu ----- */
@@ -177,14 +183,17 @@ h6 {
 .nav-mobile.open {
 	display: flex;
 }
-.nav-mobile a {
+.nav-mobile li a {
 	text-decoration: none;
 	color: white;
 	font-size: 2rem;
 	margin: 20px 0;
 	transition: color 0.3s;
 }
-.nav-mobile a:hover {
-	color: var(--alert);
+.nav-mobile li a:hover {
+	color: var(--accent);
 	filter: drop-shadow(0 0 2px);
+}
+
+@media screen and (min-width: 786px) {
 }

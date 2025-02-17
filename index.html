@@ -11,28 +11,27 @@
 			rel="stylesheet" />
 		<link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
 		<link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
-		<link rel="icon" href="../" />
+		<!-- <link rel="icon" href="../" /> -->
 
-		<script src="./WEBSITE/JAVASCRIPT/script.js" defer></script>
-		<script src="./WEBSITE/JAVASCRIPT/index.js" defer></script>
+		<!-- <script src="./WEBSITE/JAVASCRIPT/index.js" defer></script> -->
 	</head>
 	<body>
 		<!------------ HEADER ------------>
 		<header>
 			<!-- LOGO -->
 			<div class="logo">
-				<a href="../index.html">
-					<img src="../" alt="Velbekommen's Logo" />
+				<a href="./index.html">
+					<img src="./" alt="Velbekommen's Logo" />
 				</a>
 			</div>
 			<!-- NAVEGATION MENU -->
 			<nav class="nav">
 				<!-- HAMBURGER TUGGLE -->
-				<div class="menu-btn" id="menu-btn">
+				<!-- <div class="menu-button" id="menu-button">
 					<span></span>
 					<span></span>
 					<span></span>
-				</div>
+				</div> -->
 				<!-- PC NAV-MENU -->
 				<ul class="nav-links">
 					<li><a href="product_list.html">Products</a></li>
@@ -40,19 +39,43 @@
 				</ul>
 
 				<!-- MOBILE NAV-MENU -->
-				<div class="nav-mobile" id="nav-mobile">
+				<!-- <div class="nav-mobile" id="nav-mobile">
 					<li><a href="product_list.html">Products</a></li>
 					<li><a href="contact.html">Contact</a></li>
-				</div>
+				</div> -->
 			</nav>
 		</header>
 
 		<!------------ MAIN ------------>
-		<main></main>
+		<main>
+			<h1>LALA</h1>
+		</main>
 
 		<!------------ FOOTER ------------>
 		<footer>
-			<h6>Copyright © 2025. Velbekommen. All rights reserved.</h6>
+			<h5>Copyright © 2025. Velbekommen. All rights reserved.</h5>
 		</footer>
+
+		<!-- <script src="./WEBSITE/JAVASCRIPT/script.js"></script> -->
+		<!-- <script>
+			//  -------- MOBILE BURGER MENU ------------
+			const menuBtn = document.getElementById("menu-button");
+			const navMobile = document.getElementById("nav-mobile");
+
+			// Toggle mobile menu on hamburger click
+			menuBtn.addEventListener("click", () => {
+				menuBtn.classList.toggle("open");
+				navMobile.classList.toggle("open");
+			});
+
+			// Close the mobile menu when the screen gets larger than 768px
+			window.addEventListener("resize", () => {
+				if (window.innerWidth > 768) {
+					// Remove open classes when resizing to a larger screen
+					menuBtn.classList.remove("open");
+					navMobile.classList.remove("open");
+				}
+			}); -->
+		</script>
 	</body>
 </html>
