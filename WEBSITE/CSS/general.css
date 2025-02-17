@@ -1,0 +1,190 @@
+/* ------- Basic structure for all WEB PAGES made with CSS GRIDS -------- */
+:root {
+	--primary: #0d0c0b;
+	--primary-light-shade: #171717;
+	--secondary: #f2efe9;
+	--accent: #f23e26;
+	--accent-light-shade: #ffa599;
+	/* --alert: #e33c2b; */
+
+	--open: "Open Sans", sans-serif;
+	--oswald: "Oswald", sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+html {
+	font-family: var(--open), sans-serif;
+	font-size: small;
+	font-weight: 700;
+}
+
+body {
+	/* margin-top: 7rem; */
+	background-color: var(--primary);
+	width: 100vw;
+	height: 100vh;
+	padding: 0 10%;
+	align-items: center;
+	overflow-x: hidden;
+	/* margin-bottom: 20px; */
+	/* justify-content: center; */
+
+	display: grid;
+	/* grid-template-columns: repeat(3, 1fr);  --------- This code has the same efect as the line under in row 24*/
+	grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+	grid-template-rows: 90px auto 100px;
+
+	grid-template-areas:
+		"header header header"
+		"main main main"
+		"footer footer footer";
+}
+header {
+	grid-area: header;
+	background-color: var(--primary);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100vw;
+	height: 70px;
+	padding: 0 10%;
+	/* background-color: #70acff; */
+	color: var(--secondary);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* border-bottom: 2px solid var(--secondary); */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+nav {
+	grid-area: nav;
+	display: flex;
+	column-gap: 2rem;
+	/* background-color: aqua; */
+	/* justify-content: space-between; */
+	/* align-items: center; */
+}
+
+main {
+	grid-area: main;
+	justify-content: space-around;
+	background-color: var(--primary);
+	/* background-color: #ada200; */
+	/* align-items: center; */
+	/* padding-bottom: 100px; */
+}
+footer {
+	grid-area: footer;
+	background-color: var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Oswald", sans-serif;
+	font-weight: 600;
+	/* font-stretch: extra-condensed; */
+}
+
+/* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
+
+/* ----- LOGO STYLING ----- */
+.logo a {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--secondary);
+	/* transition: 0.4s ease-in-out; */
+	transition: color 0.3s;
+}
+.logo a:hover {
+	color: var(--alert);
+	/* filter: drop-shadow(0 0 2px); */
+}
+
+/* ----- Desktop navigation ----- */
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 30px;
+}
+.nav-links a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: var(--secondary);
+	transition: color 0.4s;
+}
+.nav-links a:hover {
+	color: var(--alert);
+	/* backdrop-filter: #000;
+	filter: drop-shadow(0 0 2px); */
+}
+
+/* ----- Mobile menu button ----- */
+.menu-btn {
+	display: none;
+	cursor: pointer;
+	z-index: 1001; /* Ensure it's above the mobile menu */
+}
+.menu-btn span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: var(--secondary);
+	margin: 5px 0;
+	transition: all 0.4s ease;
+}
+
+/* ----- Rotate animation for hamburger ----- */
+.menu-btn.open span:nth-child(1) {
+	transform: rotate(45deg) translate(5.7px, 5.7px);
+	background-color: var(--alert);
+}
+.menu-btn.open span:nth-child(2) {
+	opacity: 0;
+	background-color: var(--alert);
+}
+.menu-btn.open span:nth-child(3) {
+	transform: rotate(-45deg) translate(5.7px, -5.7px);
+	background-color: var(--alert);
+}
+
+/* ----- Full-screen mobile menu ----- */
+.nav-mobile {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.9);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 999; /* Under the header but above the rest of the content */
+}
+.nav-mobile.open {
+	display: flex;
+}
+.nav-mobile a {
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+	margin: 20px 0;
+	transition: color 0.3s;
+}
+.nav-mobile a:hover {
+	color: var(--alert);
+	filter: drop-shadow(0 0 2px);
+}
