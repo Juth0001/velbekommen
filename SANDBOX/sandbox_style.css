@@ -59,8 +59,6 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	justify-content: space-between;
-	align-items: center;
 	border-bottom: 2px solid var(--secondary);
 	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
@@ -107,14 +105,14 @@ h6 {
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
 
 /* ----- LOGO STYLING ----- */
-.logo a {
-	font-size: 1rem;
-	font-weight: bold;
+.logo a img {
 	color: var(--secondary);
+	max-inline-size: 4rem;
+	fill: var(--secondary);
 	/* transition: 0.4s ease-in-out; */
 	transition: color 0.3s;
 }
-.logo a:hover {
+.logo a img:hover {
 	color: var(--accent);
 	/* filter: drop-shadow(0 0 2px); */
 }
