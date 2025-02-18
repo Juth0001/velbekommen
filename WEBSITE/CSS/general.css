@@ -107,15 +107,15 @@ h6 {
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
 
 /* ----- LOGO STYLING ----- */
-.logo a {
-	font-size: 1rem;
-	font-weight: bold;
-	color: var(--secondary);
-	/* transition: 0.4s ease-in-out; */
+.logo a img {
+	/* font-size: 1rem;
+	font-weight: bold; */
+	max-inline-size: 4rem;
+	/* transitionn: 0.4s ease-in-out; */
 	transition: color 0.3s;
 }
-.logo a:hover {
-	color: var(--accent);
+.logo a img:hover {
+	forced-color-adjust: var(--accent);
 	/* filter: drop-shadow(0 0 2px); */
 }
 
