@@ -1,0 +1,41 @@
+/* MOBIL */
+
+body {
+    --primary: #0d0c0b;
+	--primary-light-shade: #171717;
+	--secondary: #f2efe9;
+	--accent: #f23e26;
+	--accent-light-shade: #ffa599;
+
+    background-color: var(--primary-light-shade);
+}
+
+#recipe_list_header {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#filter_container {
+    margin-bottom: 2rem;
+}
+
+#recipe_card {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+#recipe_card h2, p {
+color: var(--secondary);
+}
+
+#recipe_card span {
+    color: var(--accent);
+}
+
+
+#recipe_card img {
+    max-width: 100%;
+}
