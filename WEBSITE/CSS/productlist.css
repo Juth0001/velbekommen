@@ -23,6 +23,7 @@ body {
 
 #filter_container span {
     color: var(--accent);
+    font-size: 2rem;
 }
 
 select {
