@@ -21,8 +21,8 @@ fetch("https://dummyjson.com/recipes")
         <article id="recipe_card">
             <img src="https://cdn.dummyjson.com/recipe-images/${recipeData.id}.webp" alt="billede af mad" />
             <h2>${recipeData.name}</h2>
-            <span>Rating ${recipeData.rating}&#47;5</span>
-            <p>${recipeData.cuisine}</p>
+            <p class="rating">Rating ${recipeData.rating}&#47;5</p>
+            <p class="country">${recipeData.cuisine}</p>
           </article>
           `;
       })
