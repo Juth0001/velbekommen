@@ -1,0 +1,66 @@
+/* MOBIL */
+
+body {
+    --primary: #0d0c0b;
+	--primary-light-shade: #171717;
+	--secondary: #f2efe9;
+	--accent: #f23e26;
+	--accent-light-shade: #ffa599;
+
+    background-color: var(--primary-light-shade);
+}
+
+#recipe_list_header {
+    color: var(--secondary);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#filter_container {
+    margin-bottom: 2rem;
+}
+
+#filter_container span {
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+select {
+    appearance: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+#recipe_card {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+#recipe_card h2 {
+color: var(--secondary);
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+
+.rating {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.country {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: normal;
+    }
+
+#recipe_card img {
+    max-width: 100%;
+}
+
