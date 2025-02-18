@@ -105,16 +105,13 @@ h6 {
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
 
 /* ----- LOGO STYLING ----- */
-.logo a img {
-	color: var(--secondary);
+.logo img {
 	max-inline-size: 4rem;
-	fill: var(--secondary);
 	/* transition: 0.4s ease-in-out; */
 	transition: color 0.3s;
 }
-.logo a img:hover {
+.logo img:hover {
 	color: var(--accent);
-	/* filter: drop-shadow(0 0 2px); */
 }
 
 /* ----- Desktop navigation ----- */
