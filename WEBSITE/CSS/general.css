@@ -5,10 +5,9 @@
 	--secondary: #f2efe9;
 	--accent: #f23e26;
 	--accent-light-shade: #ffa599;
-	/* --alert: #e33c2b; */
 
 	--open: "Open Sans", sans-serif;
-	--oswald: "Oswald", sans-serif;
+	/* --oswald: "Oswald", sans-serif; */
 	--impact: "Impact", sans-serif;
 }
 * {
@@ -24,18 +23,13 @@ html {
 }
 
 body {
-	/* margin-top: 7rem; */
-	/* background-color: var(--primary); */
 	width: 100vw;
 	height: 100vh;
 	padding: 0;
 	align-items: center;
-	/* overflow-x: hidden; */
-	/* margin-bottom: 20px; */
-	/* justify-content: center; */
+	overflow-x: hidden;
 
 	display: grid;
-	/* grid-template-columns: repeat(3, 1fr);  --------- This code has the same efect as the line under in row 24*/
 	grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
 	grid-template-rows: 70px auto 70px;
 
@@ -59,8 +53,6 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	justify-content: space-between;
-	align-items: center;
 	border-bottom: 2px solid var(--secondary);
 	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
@@ -68,9 +60,6 @@ nav {
 	grid-area: nav;
 	display: flex;
 	column-gap: 2rem;
-	/* background-color: aqua; */
-	/* justify-content: space-between; */
-	/* align-items: center; */
 }
 
 main {
@@ -87,7 +76,6 @@ footer {
 	background-color: var(--secondary);
 	justify-items: right;
 	align-content: center;
-	/* text-align: right; */
 	width: 100vw;
 	height: 70px;
 	padding: 0 10%;
@@ -99,13 +87,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Oswald", sans-serif;
-	font-weight: 600;
-	/* font-stretch: extra-condensed; */
+	font-family: "Impact", sans-serif;
 }
 
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
-
 /* ----- LOGO STYLING ----- */
 .logo a img {
 	/* font-size: 1rem;
@@ -114,15 +99,15 @@ h6 {
 	/* transitionn: 0.4s ease-in-out; */
 	transition: color 0.3s;
 }
-.logo a img:hover {
-	forced-color-adjust: var(--accent);
-	/* filter: drop-shadow(0 0 2px); */
-}
+/* .logo a img:hover {
+	forced-color-adjust: var(--accent); */
+/* filter: drop-shadow(0 0 2px);
+} */
 
 /* ----- Desktop navigation ----- */
 .nav-links {
 	list-style: none;
-	display: flex;
+	display: none;
 	gap: 30px;
 }
 .nav-links a {
@@ -133,17 +118,15 @@ h6 {
 }
 .nav-links a:hover {
 	color: var(--accent);
-	/* backdrop-filter: #000;
-	filter: drop-shadow(0 0 2px); */
 }
 
 /* ----- Mobile menu button ----- */
-.menu-button {
-	display: none;
+.menu-btn {
+	display: block;
 	cursor: pointer;
 	z-index: 1001; /* Ensure it's above the mobile menu */
 }
-.menu-button span {
+.menu-btn span {
 	display: block;
 	width: 25px;
 	height: 3px;
@@ -153,15 +136,15 @@ h6 {
 }
 
 /* ----- Rotate animation for hamburger ----- */
-.menu-button.open span:nth-child(1) {
+.menu-btn.open span:nth-child(1) {
 	transform: rotate(45deg) translate(5.7px, 5.7px);
 	background-color: var(--accent);
 }
-.menu-button.open span:nth-child(2) {
+.menu-btn.open span:nth-child(2) {
 	opacity: 0;
 	background-color: var(--accent);
 }
-.menu-button.open span:nth-child(3) {
+.menu-btn.open span:nth-child(3) {
 	transform: rotate(-45deg) translate(5.7px, -5.7px);
 	background-color: var(--accent);
 }
@@ -183,17 +166,27 @@ h6 {
 .nav-mobile.open {
 	display: flex;
 }
-.nav-mobile li a {
+.nav-mobile a {
 	text-decoration: none;
 	color: white;
 	font-size: 2rem;
 	margin: 20px 0;
 	transition: color 0.3s;
 }
-.nav-mobile li a:hover {
+.nav-mobile a:hover {
 	color: var(--accent);
-	filter: drop-shadow(0 0 2px);
+	/* filter: drop-shadow(0 0 2px); */
 }
 
-@media screen and (min-width: 786px) {
+/* -------------- MOBILE LANDSCAPE AND TABLET DEVICES -------------- */
+@media screen and (min-width: 768px) {
+	.nav-links {
+		display: flex;
+	}
+	.menu-btn {
+		display: none;
+	}
+	.nav-mobile a:hover {
+		color: var(--accent);
+	}
 }

@@ -53,7 +53,7 @@ header {
 	width: 100vw;
 	height: 70px;
 	padding: 0 10%;
-	background-color: var(--primary);
+	/* background-color: var(--primary); */
 	color: var(--secondary);
 	position: fixed;
 	top: 0;
@@ -61,14 +61,6 @@ header {
 	z-index: 100;
 	border-bottom: 2px solid var(--secondary);
 	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-}
-nav {
-	grid-area: nav;
-	display: flex;
-	column-gap: 2rem;
-	/* background-color: aqua; */
-	/* justify-content: space-between; */
-	/* align-items: center; */
 }
 
 main {
@@ -103,6 +95,14 @@ h6 {
 }
 
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
+nav {
+	grid-area: nav;
+	display: flex;
+	column-gap: 2rem;
+	/* background-color: aqua; */
+	/* justify-content: space-between; */
+	/* align-items: center; */
+}
 
 /* ----- LOGO STYLING ----- */
 .logo img {
@@ -110,31 +110,13 @@ h6 {
 	/* transition: 0.4s ease-in-out; */
 	transition: color 0.3s;
 }
-.logo img:hover {
+/* .logo img:hover {
 	color: var(--accent);
-}
-
-/* ----- Desktop navigation ----- */
-.nav-links {
-	list-style: none;
-	display: flex;
-	gap: 30px;
-}
-.nav-links a {
-	text-decoration: none;
-	font-size: 1.5rem;
-	color: var(--secondary);
-	transition: color 0.4s;
-}
-.nav-links a:hover {
-	color: var(--accent);
-	/* backdrop-filter: #000;
-	filter: drop-shadow(0 0 2px); */
-}
+} */
 
 /* ----- Mobile menu button ----- */
 .menu-button {
-	display: none;
+	/* display: none; */
 	cursor: pointer;
 	z-index: 1001; /* Ensure it's above the mobile menu */
 }
@@ -146,7 +128,6 @@ h6 {
 	margin: 5px 0;
 	transition: all 0.4s ease;
 }
-
 /* ----- Rotate animation for hamburger ----- */
 .menu-button.open span:nth-child(1) {
 	transform: rotate(45deg) translate(5.7px, 5.7px);
@@ -190,5 +171,23 @@ h6 {
 	filter: drop-shadow(0 0 2px);
 }
 
-/* @media screen and (min-width: 786px) {
-} */
+@media screen and (min-width: 786px) {
+	.nav-links {
+		list-style: none;
+		display: flex;
+		gap: 60px;
+	}
+
+	/* ----- Desktop navigation ----- */
+	.nav-links a {
+		text-decoration: none;
+		font-size: 1.5rem;
+		color: var(--secondary);
+		transition: color 0.4s;
+	}
+	.nav-links a:hover {
+		color: var(--accent);
+		/* backdrop-filter: #000;
+	filter: drop-shadow(0 0 2px); */
+	}
+}
