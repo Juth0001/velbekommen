@@ -1,57 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex" />
-		<title>HOME</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>HOME</title>
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
-		<!-- <link rel="icon" href="../" /> -->
-
-		<!-- <script src="./WEBSITE/JAVASCRIPT/index.js" defer></script> -->
-	</head>
-	<body>
-		<!------------ HEADER ------------>
-		<header>
-			<!-- LOGO -->
-			<div class="logo">
-				<a href="./index.html">
-					<img src="./WEBSITE/ASSETS/Images/Light Logos/Brand mark Logo .light.png" alt="Velbekommen's Logo" />
-				</a>
-			</div>
-			<!-- NAVEGATION MENU -->
-			<nav class="nav">
-				<!-- HAMBURGER TUGGLE -->
-				<!-- <div class="menu-button" id="menu-button">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
+    <link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
+    <link rel="stylesheet" href="/WEBSITE/CSS/productlist.css" />
+    <!-- <link rel="icon" href="../" /> -->
+    <script src="/WEBSITE/JAVASCRIPT/product_list.js" defer></script>
+    <!-- <script src="./WEBSITE/JAVASCRIPT/index.js" defer></script> -->
+  </head>
+  <body>
+    <!------------ HEADER ------------>
+    <header>
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./WEBSITE/ASSETS/Images/Light Logos/Brand mark Logo .light.png" alt="Velbekommen's Logo" />
+        </a>
+      </div>
+      <!-- NAVEGATION MENU -->
+      <nav class="nav">
+        <!-- HAMBURGER TUGGLE -->
+        <!-- <div class="menu-button" id="menu-button">
 					<span></span>
 					<span></span>
 					<span></span>
 				</div> -->
-				<!-- PC NAV-MENU -->
-				<ul class="nav-links">
-					<li><a href="product_list.html">Products</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+        <!-- PC NAV-MENU -->
+        <ul class="nav-links">
+          <li><a href="product_list.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-				<!-- MOBILE NAV-MENU -->
-				<!-- <div class="nav-mobile" id="nav-mobile">
+        <!-- MOBILE NAV-MENU -->
+        <!-- <div class="nav-mobile" id="nav-mobile">
 					<li><a href="product_list.html">Products</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</div> -->
-			</nav>
-		</header>
+      </nav>
+    </header>
 
-		<!------------ MAIN ------------>
-		<main></main>
+    <!------------ MAIN ------------>
+    <main>
+      <div id="recipe_list_header">
+        <h1>Recipe list</h1>
+      </div>
 
-		<!------------ FOOTER ------------>
-		<footer>
-			<h5>Copyright © 2025. Velbekommen. All rights reserved.</h5>
-		</footer>
-	</body>
+      <section id="recipe_list_container">
+        <article id="filter_container">
+          <select name="Land" class="elementSelector">
+            <option value="none">Viser alle opskrifter</option>
+          </select>
+          <select name="Type" class="elementSelector">
+            <option value="none">Viser alle opskrifter</option>
+          </select>
+          <select name="Prep time" class="elementSelector">
+            <option value="none">Viser alle opskrifter</option>
+          </select>
+          <select name="Difficulty" class="elementSelector">
+            <option value="none">Viser alle opskrifter</option>
+          </select>
+        </article>
+
+        <aside id="recipe_list">
+          <!-- <article id="recipe_card">
+            <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="billede af mad" />
+            <h2>Name of recipe</h2>
+            <span>Rating</span>
+            <p>Description</p>
+          </article> -->
+        </aside>
+      </section>
+    </main>
+
+    <!------------ FOOTER ------------>
+    <footer>
+      <h5>Copyright © 2025. Velbekommen. All rights reserved.</h5>
+    </footer>
+  </body>
 </html>
