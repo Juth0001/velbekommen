@@ -63,7 +63,7 @@ nav {
 
 main {
 	grid-area: main;
-	justify-content: space-around;
+	/* justify-content: space-around; */
 	padding: 0 10%;
 	background-color: var(--primary);
 	/* align-items: center; */
@@ -76,7 +76,7 @@ footer {
 	justify-items: right;
 	align-content: center;
 	width: 100vw;
-	height: 70px;
+	height: 100%;
 	padding: 0 10%;
 }
 
@@ -137,14 +137,17 @@ h6 {
 /* ----- Rotate animation for hamburger ----- */
 .menu-btn.open span:nth-child(1) {
 	transform: rotate(45deg) translate(5.7px, 5.7px);
-	background-color: var(--accent);
+	background-color: var(--secondary);
 }
 .menu-btn.open span:nth-child(2) {
 	opacity: 0;
-	background-color: var(--accent);
+	background-color: var(--secondary);
 }
 .menu-btn.open span:nth-child(3) {
 	transform: rotate(-45deg) translate(5.7px, -5.7px);
+	background-color: var(--secondary);
+}
+.menu-btn.open:hover {
 	background-color: var(--accent);
 }
 
@@ -177,7 +180,7 @@ h6 {
 	/* filter: drop-shadow(0 0 2px); */
 }
 
-/* -------------- MOBILE LANDSCAPE AND TABLET DEVICES -------------- */
+/* -------------- MOBILE LANDSCAPE, TABLET and PC DEVICES -------------- */
 @media screen and (min-width: 768px) {
 	.nav-links {
 		display: flex;
