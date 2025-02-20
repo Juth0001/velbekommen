@@ -63,7 +63,7 @@ nav {
 
 main {
 	grid-area: main;
-	/* justify-content: space-around; */
+	justify-content: space-between;
 	padding: 0 10%;
 	background-color: var(--primary);
 	/* align-items: center; */
