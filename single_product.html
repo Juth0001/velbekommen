@@ -11,11 +11,12 @@
 			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
+		<link rel="stylesheet" href="./WEBSITE/CSS/single_prod.css" />
 		<!-- <link rel="icon" href="../" /> -->
 
-		<!-- <script src="./WEBSITE/JAVASCRIPT/index.js" defer></script> -->
+		<script src="./WEBSITE/JAVASCRIPT/single_product.js" defer></script>
 	</head>
+
 	<body>
 		<!------------ HEADER ------------>
 		<header>
@@ -36,20 +37,93 @@
 				</div>
 				<!-- PC NAV-MENU -->
 				<ul class="nav-links">
-					<li><a href="product_list.html">Products</a></li>
+					<li><a href="product_list.html">Recipes</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 
 				<!-- MOBILE NAV-MENU -->
 				<div class="nav-mobile" id="nav-mobile">
-					<a href="product_list.html">Products</a>
+					<a href="product_list.html">Recipes</a>
 					<a href="contact.html">Contact</a>
 				</div>
 			</nav>
 		</header>
 
 		<!------------ MAIN ------------>
-		<main></main>
+		<main class="single_product_container">
+			<section class="product_info">
+				<article class="left img">
+					<h6 class="id">id</h6>
+					<img
+						src="./WEBSITE/ASSETS/Images/luxorious Garlic Butter Steak Bites on an iland kitchen, dressed in whi.webp"
+						alt="prod_name" />
+				</article>
+				<article class="right short_details_container">
+					<!-- <div class="rating_status">
+						<p class="rating_selected"></p>
+						<p class="rating_unselected"></p>
+					</div> -->
+					<h3 class="prod_name">Product name</h3>
+					<h5>Rating<span></span></h5>
+					<div class="short_details">
+						<dl>
+							<dt>Meal type:</dt>
+							<dd></dd>
+							<dt>Cuisine/Country:</dt>
+							<dd></dd>
+							<dt>Servings/Portions:</dt>
+							<dd></dd>
+							<dt>Calories (kcal) x portion:</dt>
+							<dd></dd>
+						</dl>
+						<dl>
+							<dt>Preparation time (min):</dt>
+							<dd></dd>
+							<dt>Cook time (min):</dt>
+							<dd></dd>
+							<dt>Difficulty:</dt>
+							<dd></dd>
+							<dt>Tags:</dt>
+							<dd></dd>
+						</dl>
+					</div>
+				</article>
+			</section>
+
+			<section class="long_details_container">
+				<article class="left">
+					<h6 class="ingredients">Ingredients</h6>
+					<p></p>
+					<!-- Place each ingredients on a checkbox -->
+				</article>
+				<article class="right">
+					<h6 class="instructions">Here is how to do it</h6>
+					<p></p>
+					<!-- Place each instruction on a checkbox -->
+				</article>
+			</section>
+
+			<section class="comment_container">
+				<article class="left">
+					<h6>Bedøm opskriften</h6>
+					<!-- Place 5 empty stars as a checkbox users can click on, to define IF THEY LIKE THE RECIPE -->
+					<h6>Review count:</h6>
+				</article>
+				<article class="right">
+					<h6 class="comment_form">What do you think about it?</h6>
+					<!-- Get users Comments, Feedbacks and more. -->
+					<form action="/action_page.php" method="get" name="commentForm">
+						<!-- <label for="fname">Navn</label><br /> -->
+						<input type="text" id="fname" name="fname" placeholder="Fulde navn.." /><br />
+						<!-- <label for="email">Email:</label><br /> -->
+						<input type="email" id="email" name="email" placeholder="Email.." /><br />
+						<!-- <label for="bio">Besked: <br /> -->
+						<textarea id="besked" name="bio" rows="2" cols="20" placeholder="Din besked her"></textarea>
+						<input type="submit" value="Submit" />
+					</form>
+				</article>
+			</section>
+		</main>
 
 		<!------------ FOOTER ------------>
 		<footer>
