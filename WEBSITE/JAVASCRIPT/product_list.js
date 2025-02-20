@@ -84,6 +84,7 @@ function visListe(data, event) {
             <h2>${opskrift.name}</h2>
             <p class="rating">Rating&#58; ${opskrift.rating}&#47;5</p>
             <p class="cuisine">${opskrift.cuisine}</p>
+            <button><a href="single_product.html?recipe=${opskrift.id}">View Recipe</a></button>
           </article>`
     )
     .join("");
