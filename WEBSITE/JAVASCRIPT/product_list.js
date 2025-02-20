@@ -10,6 +10,8 @@ selectMealType.addEventListener("change", filterMealType);
 selectDifficulty.addEventListener("change", filterDifficulty);
 selectServing.addEventListener("change", filterServing);
 
+console.log("JEG ER I LIVE");
+
 let allRecipes,
   filteredData,
   cuisine = "All",
