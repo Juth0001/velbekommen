@@ -86,7 +86,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Impact", sans-serif;
+	font-family: var(--oswald), sans-serif;
 }
 
 /* -------------- NAV-MENU FOR MOBILE DEVICES -------------- */
