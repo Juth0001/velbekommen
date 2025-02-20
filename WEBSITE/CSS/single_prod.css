@@ -6,7 +6,11 @@
 	--accent-light-shade: #ffa599;
 
 	background-color: var(--primary-light-shade);
+
+	--open: "Open Sans", sans-serif;
+	--oswald: "Oswald", sans-serif;
 }
+
 html {
 	margin: 0;
 	padding: 0;
@@ -96,7 +100,66 @@ dd {
 	margin-top: 0.5rem;
 	font-weight: 300;
 }
+form {
+	display: grid;
+	margin: 1.5rem 0;
+	padding: 0;
+}
+/* input {
+	display: flex;
+	width: 100%;
+	height: 2rem;
 
+	font-family: var(--open);
+	font-size: 1rem;
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+textarea {
+	height: 4rem;
+	box-sizing: border-box;
+	font-family: var(--open);
+	font-size: 1rem;
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+input[type="button"] {
+	background-color: var(--secondary);
+	color: var(--primary);
+	padding-top: 2rem;
+} */
+input[type="text"],
+[type="email"],
+#besked {
+	height: 2rem;
+	/* box-sizing: border-box; */
+	font-family: var(--open);
+	font-size: 1.1rem;
+	background-color: var(--secondary);
+	color: var(--primary);
+	text-indent: 15px;
+}
+input[type="submit"] {
+	width: 100%;
+	margin: 1em auto;
+	height: 2em;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--secondary);
+	background-color: var(--accent);
+	border-width: 2px;
+	border-color: var(--accent);
+	min-width: 100px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+input[type="submit"]:hover {
+	color: var(--accent);
+	background-color: var(--primary);
+	font-weight: 600;
+	/* border: 1.2px; */
+	border-color: var(--accent);
+}
 /* -------------- MOBILE LANDSCAPE, TABLET and PC DEVICES -------------- */
 @media screen and (min-width: 768px) {
 	.img img {
