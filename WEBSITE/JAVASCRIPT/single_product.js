@@ -2,11 +2,11 @@
 
 const productContainer = document.querySelector(".single_product_container");
 
-let recipeId = new URLSearchParams(window.location.search).get("recipe");
+let recipeId = new URLSearchParams(window.location.search).get("id");
 //hvis recipeId is null, set recipeId til 1
-// if (!recipeId) {
-// 	recipeId = 1;
-// }
+if (!recipeId) {
+	recipeId = 1;
+}
 
 fetch(`https://dummyjson.com/recipes/${recipeId}`)
 	.then((response) => response.json())
