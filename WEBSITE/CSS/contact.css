@@ -15,7 +15,6 @@ body {
 
 header {
     background-color: black;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +33,9 @@ nav a.active {
 main {
     text-align: center;
     padding: 20px;
+    width: 85%;
     height: auto;
+    margin: auto;
 }
 
 h1 {
