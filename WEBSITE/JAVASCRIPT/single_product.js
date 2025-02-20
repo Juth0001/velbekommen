@@ -1,19 +1,24 @@
 // --- Link til produktet (En HURTIGERE måde at FETCH på)
 
-const productContainer = document.querySelector("single_product_container");
+const productContainer = document.querySelector(".single_product_container");
 
-const recipeId = new URLSearchParams(window.location.search).get("recipe");
+let recipeId = new URLSearchParams(window.location.search).get("id");
+//hvis recipeId is null, set recipeId til 1
+if (!recipeId) {
+	recipeId = 1;
+}
 
 fetch(`https://dummyjson.com/recipes/${recipeId}`)
 	.then((response) => response.json())
 	.then((data) => {
+		console.log("data", data);
 		productContainer.innerHTML = `
                <main class="single_product_container">
                     <section class="product_info">
 		     		<article class="left img">
 		     			<h6 class="id">${data.id}</h6>
 		     			<img
-		     				src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp"
+		     				src="${data.image}"
 		     				alt="prod_name" />
 		     		</article>
 		     		<article class="right short_details_container">
