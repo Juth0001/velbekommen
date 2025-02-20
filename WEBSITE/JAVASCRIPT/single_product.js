@@ -2,9 +2,9 @@
 
 const productContainer = document.querySelector("single_product_container");
 
-const recipesId = new URLSearchParams(window.location.search).get("recipes");
+const recipeId = new URLSearchParams(window.location.search).get("recipe");
 
-fetch(`https://dummyjson.com/recipes/${recipesId}`)
+fetch(`https://dummyjson.com/recipes/${recipeId}`)
 	.then((response) => response.json())
 	.then((data) => {
 		productContainer.innerHTML = `
