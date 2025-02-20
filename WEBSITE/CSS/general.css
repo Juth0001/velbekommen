@@ -7,8 +7,7 @@
 	--accent-light-shade: #ffa599;
 
 	--open: "Open Sans", sans-serif;
-	/* --oswald: "Oswald", sans-serif; */
-	--impact: "Impact", sans-serif;
+	--oswald: "Oswald", sans-serif;
 }
 * {
 	margin: 0;
