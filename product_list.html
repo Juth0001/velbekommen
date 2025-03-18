@@ -1,124 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Recipies</title>
 
+    <link rel="shortcut icon" href="./WEBSITE/ASSETS/Images/Light Logos/Favicon_light.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
+    <link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
+    <link rel="stylesheet" href="./WEBSITE/CSS/productlist.css" />
+    <script src="./WEBSITE/JAVASCRIPT/product_list.js" defer></script>
+  </head>
 
-		<link rel="shortcut icon" href="./WEBSITE/ASSETS/Images/Light Logos/Favicon_light.png" type="image/x-icon" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap"
-			rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/general.css" />
-		<link rel="stylesheet" href="./WEBSITE/CSS/elements_style.css" />
-		<link rel="stylesheet" href="/WEBSITE/CSS/productlist.css" />
-		<script src="/WEBSITE/JAVASCRIPT/product_list.js" defer></script>
-	</head>
+  <body>
+    <!------------ HEADER ------------>
+    <header>
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./WEBSITE/ASSETS/Images/Light Logos/Brand_mark_Logo_light.png" alt="Velbekommen's_Logo" />
+        </a>
+      </div>
 
-	<body>
-		<!------------ HEADER ------------>
-		<header>
-			<!-- LOGO -->
-			<div class="logo">
-				<a href="./index.html">
-					<img src="./WEBSITE/ASSETS/Images/Light Logos/Brand_mark_Logo_light.png" alt="Velbekommen's_Logo" />
-				</a>
-			</div>
+      <!-- NAVEGATION MENU -->
+      <nav class="nav">
+        <!-- HAMBURGER TOGGLE -->
+        <div class="menu-btn" id="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- PC NAV-MENU -->
+        <ul class="nav-links">
+          <li><a href="product_list.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-			<!-- NAVEGATION MENU -->
-			<nav class="nav">
-				<!-- HAMBURGER TOGGLE -->
-				<div class="menu-btn" id="menu-btn">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<!-- PC NAV-MENU -->
-				<ul class="nav-links">
-					<li><a href="product_list.html">Recipes</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+        <!-- MOBILE NAV-MENU -->
+        <div class="nav-mobile" id="nav-mobile">
+          <a href="product_list.html">Recipes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-				<!-- MOBILE NAV-MENU -->
-				<div class="nav-mobile" id="nav-mobile">
-					<a href="product_list.html">Recipes</a>
-					<a href="contact.html">Contact</a>
-				</div>
-			</nav>
-		</header>
+    <!------------ MAIN ------------>
+    <main id="list_main">
+      <div id="recipe_list_header">
+        <h1>RECEPIES</h1>
+      </div>
 
-
-		<!------------ MAIN ------------>
-		<main id="list_main">
-			<div id="recipe_list_header">
-				<h1>RECEPIES</h1>
-			</div>
-
-			<section id="recipe_list_container">
-				<article id="filter_container">
-					<aside>
-						<span>&#43;</span>
-						<select id="cuisineSelector">
-							<option value="All">Country</option>
-							<!-- <option value="Italian">Italian</option>
+      <section id="recipe_list_container">
+        <article id="filter_container">
+          <aside>
+            <span>&#43;</span>
+            <select id="cuisineSelector">
+              <option value="All">Country</option>
+              <!-- <option value="Italian">Italian</option>
               <option value="Mexican">Mexican</option>
               <option value="Asian">Asian</option>
               <option value="Mediterranian">Mediterranian</option>
               <option value="American">American</option> -->
-						</select>
-					</aside>
+            </select>
+          </aside>
 
-					<aside>
-						<span>&#43;</span>
-						<select id="typeSelector">
-							<option value="All">Type</option>
-							<!-- <option value="breakfast">Breakfast</option>
+          <aside>
+            <span>&#43;</span>
+            <select id="typeSelector">
+              <option value="All">Type</option>
+              <!-- <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
               <option value="snacks">Snacks</option>
               <option value="desserts">Desserts</option> -->
-						</select>
-					</aside>
+            </select>
+          </aside>
 
-					<aside>
-						<span>&#43;</span>
-						<select id="difficultySelector">
-							<option value="All">Difficulty</option>
-							<!-- <option value="single">Single</option>
+          <aside>
+            <span>&#43;</span>
+            <select id="difficultySelector">
+              <option value="All">Difficulty</option>
+              <!-- <option value="single">Single</option>
               <option value="couple">Couple</option>
               <option value="family">Family</option>
               <option value="party">Party</option> -->
-						</select>
-					</aside>
+            </select>
+          </aside>
 
-					<aside>
-						<span>&#43;</span>
-						<select id="servingSelector">
-							<option value="All">Servings</option>
-							<!-- <option value="easy">Easy</option>
+          <aside>
+            <span>&#43;</span>
+            <select id="servingSelector">
+              <option value="All">Servings</option>
+              <!-- <option value="easy">Easy</option>
               <option value="intermediate">Intermediate</option>
               <option value="advanced">Advanced</option> -->
-						</select>
-					</aside>
-				</article>
+            </select>
+          </aside>
+        </article>
 
         <aside id="recipe_list"></aside>
       </section>
     </main>
 
-		<!------------ FOOTER ------------>
-		<footer>
-			<p>Copyright © 2025. Velbekommen. All rights reserved.</p>
-		</footer>
+    <!------------ FOOTER ------------>
+    <footer>
+      <p>Copyright © 2025. Velbekommen. All rights reserved.</p>
+    </footer>
 
-		<script src="./WEBSITE/JAVASCRIPT/script.js"></script>
-	</body>
+    <script src="./WEBSITE/JAVASCRIPT/script.js"></script>
+  </body>
 </html>
